@@ -12,6 +12,7 @@ TODO: Start a list of important programming vocabulary in your readme.md for
 this week. E.g. the word "calling" means something in a programming context, 
 what does it mean?
 """
+
 import platform
 
 # I think this will print "hello! Let's get started" by calling the print function.
@@ -20,7 +21,7 @@ print("hello! Let's get started")  # it printed "hello! Let's get started"
 some_words = ["what", "does", "this", "line", "do", "?"]
 
 for word in some_words:
-    print(word)
+    print("what does this line do ?")
 
 for x in some_words:
     print(x)
