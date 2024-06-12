@@ -78,7 +78,7 @@ def loops_1c(number_of_items=5, symbol="#"):
     Remember that you're being passed arguments here. Don't hard code the number
     or the symbol, let it be whatever it wants to be.
     """
-    return [symbol] * [number_of_items]
+    return [symbol] * number_of_items
 
 
 def loops_2_preview():
@@ -241,6 +241,14 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
+
+    pyramid = []
+    n = 5  # Number of rows
+
+    for i in range(n):
+        row = [" "] * (n - i - 1) + ["*"] * (2 * i + 1) + [" "] * (n - i - 1)
+        pyramid.append(row)
+
     return pyramid
 
 
