@@ -18,7 +18,7 @@ def is_odd(a_number):
 
     So if a_number modulo two is zero, then it's even.
     """
-    
+
     return a_number % 2 == 0
 
 
@@ -65,7 +65,7 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    return ['*'] * 8
+    return ["*"] * 8
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -99,7 +99,7 @@ def loops_2_preview():
         for j in range(4):
             row.append("💩")
         field.append(row)
-    return ['💩'] * for in range(4)
+    return [["💩"] * 4 for _ in range(4)]
 
 
 def loops_2():
@@ -120,7 +120,7 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return ['*'] * for in range(10)
+    return [["*"] * 10 for _ in range(10)]
 
 
 def loops_3():
@@ -144,7 +144,7 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return str
+    return [[str(i)] * 10 for i in range(10)]
 
 
 def loops_4():
@@ -164,7 +164,7 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+    return [list(map(str, range(10))) for _ in range(10)]
 
 
 def loops_5():
@@ -194,7 +194,7 @@ def loops_5():
         f"There are {num_bottles} green bottles"
     you'll come to see the pros and cons of each over time.
     """
-    return None
+    return [[f"(i{i}, j{j})" for j in range(5)] for i in range(10)]
 
 
 def loops_6():
@@ -217,7 +217,7 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    return [list(map(str, range(i + 1))) for i in range(10)]
 
 
 def loops_7():
@@ -241,7 +241,7 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
+    return pyramid
 
 
 if __name__ == "__main__":
