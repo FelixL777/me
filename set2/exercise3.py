@@ -37,11 +37,12 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements.
     As an extra challenge, see if you can get that down to three.
     """
-    if moves and not should_move
-    return "WD-40"
-    elif not moves and should_move
-    return "Duct tape"
-    else return "No Problem"
+    if moves and not should_move:
+        return "WD-40"
+    elif not moves and should_move:
+        return "Duct tape"
+    else:
+        return "No Problem"
 
 
 def loops_preview():
