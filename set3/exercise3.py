@@ -6,6 +6,15 @@ Steps on the way to making your own guessing game.
 import random
 
 
+def get_valid_number(prompt):
+    while True:
+        try:
+            value = int(input(prompt))
+            return value
+        except ValueError:
+            print("Please enter a valid integer.")
+
+
 def advancedGuessingGame():
     """Play a guessing game with a user.
 
@@ -29,7 +38,34 @@ def advancedGuessingGame():
     purpose if you can!
     """
 
-    return "You got it!"
+    print("Welcome to the Advanced Guessing Game!")
+
+    lower_bound = get_valid_number("Enter the lower bound: ")
+
+    while True:
+        upper_bound = get_valid_number("Enter the upper bound: ")
+        if upper_bound > lower_bound:
+            break
+        else:
+            print(f"Upper bound must be greater than lower bound ({lower_bound}).")
+
+    target_number = random.randint(lower_bound, upper_bound)
+    print(f"Guess a number between {lower_bound} and {upper_bound}")
+
+    while True:
+        guess = get_valid_number("Your guess: ")
+
+        if guess < lower_bound or guess > upper_bound:
+            print(
+                f"Your guess is out of bounds! It must be between {lower_bound} and {upper_bound}."
+            )
+        elif guess < target_number:
+            print("Too low!")
+        elif guess > target_number:
+            print("Too high!")
+        else:
+            print("You got it!")
+            return "You got it!"
     # the tests are looking for the exact string "You got it!". Don't modify that!
 
 

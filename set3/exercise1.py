@@ -17,7 +17,16 @@ def loop_ranger(start, stop=None, step=1):
     Look up for how range() works in the python docs. You could  answer this
     with just the range function, but we'd like you to do it the long way.
     """
-    return None
+
+    if stop is None:
+        raise ValueError
+
+    current = start
+    numbers = []
+    while current < stop:
+        numbers.append(current)
+        current += step
+    return numbers
 
 
 def two_step_ranger(start, stop):
@@ -28,7 +37,7 @@ def two_step_ranger(start, stop):
 
     You can either reuse loop_ranger, or the range function that in the standard library
     """
-    return None
+    return loop_ranger(start, stop, step=2)
 
 
 def stubborn_asker(low, high):
@@ -39,7 +48,15 @@ def stubborn_asker(low, high):
 
     Look up the docs for a function called "input"
     """
-    return None
+    while True:
+        try:
+            number = int(input(f"Please enter a number between {low} and {high}: "))
+            if low <= number <= high:
+                return number
+            else:
+                print(f"The number must be between {low} and {high}.")
+        except ValueError:
+            print("Please enter a valid number.")
 
 
 def not_number_rejector(message):
@@ -49,7 +66,12 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    return None
+    while True:
+        try:
+            number = int(input(message))
+            return number
+        except ValueError:
+            print("Please enter a valid number.")
 
 
 def super_asker(low, high):
@@ -58,7 +80,15 @@ def super_asker(low, high):
     Combine what you learnt from stubborn_asker and not_number_rejector
     to make a function that does it all!
     """
-    return None
+    while True:
+        try:
+            number = int(input(f"Please enter a number between {low} and {high}: "))
+            if low <= number <= high:
+                return number
+            else:
+                print(f"The number must be between {low} and {high}.")
+        except ValueError:
+            print("Please enter a valid number.")
 
 
 if __name__ == "__main__":
@@ -69,7 +99,9 @@ if __name__ == "__main__":
     # NOTE: because some of these take user input you can't run them from
 
     print("\nloop_ranger", loop_ranger(1, 10, 2))
-    print("\ntwo_step_ranger", two_step_ranger(1, 10))
+    print("\nloop_ranger", loop_ranger(1, 10, 3))
+    print("\ntwo_step_ranger", two_step_ranger(1, 7))
+    print("\ntwo_step_ranger", two_step_ranger(6, 14))
     print("\nstubborn_asker")
     stubborn_asker(30, 45)
     print("\nnot_number_rejector")
