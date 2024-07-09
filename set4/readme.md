@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+In set 4, I mainly learned how to extract information from the URL. There is still a lot of information that I don't understand, such as the data returned by the website, etc. I felt helpless and confused when I first started, but as I analyzed the code sentence by sentence, I gradually began to understand it, but there are still some parts that I don't understand, and I don't know which part needs to be remembered and which part can be flexibly rewritten.
