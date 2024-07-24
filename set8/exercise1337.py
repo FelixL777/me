@@ -126,6 +126,20 @@ def set_it_on_fire(input_string="very naughty boy") -> str:
     return "🔥" + "🔥".join(list(input_string.upper())) + "🔥"
 
 
+def the_chain_gang_5(the_value) -> bool:
+    """Take the_value, subtract 5 from it, and return True if the value we end up with it 5.
+
+    You don't get anything for free this far into the quiz, you can't
+    use the == operator or the - operator, and you must use two of the
+    functions you've already written.
+
+    TIP: you've already written a function that returns True if the value is 5
+    TIP: you've already written a function that subtracts 5
+    """
+
+    return is_it_5(take_five(the_value))
+
+
 def pet_filter(letter="a") -> List:
     """Return a list of pets whose name contains the character 'letter'"""
     # fmt: off
@@ -226,6 +240,7 @@ def fast_filler(number_of_words=200) -> str:
     Use the filename "dict_cache.json"
     TIP: you'll need the os and json libraries
     TIP: you'll probably want to use json dumps and loads to get the
+    TIP: This is making sentences. Make the first letter capital, and add a full stop to the end.
     dictionary into and out of the file. Be careful when you read it back in,
     it'll convert integer keys to strings.
     If you get this one to work, you are a Very Good Programmer™!
@@ -239,12 +254,12 @@ def fast_filler(number_of_words=200) -> str:
         my_dict = make_filler_text_dictionary()
         with open(fname, "w") as file:
             json.dump(my_dict, file)
-
     words = [
         random.choice(my_dict[str(random.randint(3, 7))])
         for _ in range(number_of_words)
     ]
-    return " ".join(words)
+    text = " ".join(words).capitalize() + "."
+    return text
 
 
 if __name__ == "__main__":
