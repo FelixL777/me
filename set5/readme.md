@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+This week, I mainly learned how to extract datasets. Each column of the dataset mainly shows the content of each column, which can be viewed through .columns. The .head() code can organize and visualize the first five rows of the dataset, or use .sample(5) to randomly extract five rows for viewing. There are also some commands for preliminary import and inspection of datasets, which gave me a preliminary understanding of the principles of data analysis.
