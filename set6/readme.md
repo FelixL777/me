@@ -1,1 +1,3 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+This week, I mainly decided on my topic and understood that defining a data collection file with a name such as seat_data means loading a CSV file from a specified file path or URL and reading its content into a Pandas DataFrame object. If the subsequent steps are repeated for each data collection file, it will cause multiple readings of the file, which will cause a load on the system and make the code complicated.
+In addition, if I want to get a file from the Internet, I can use 'os.path.isfile()' to check whether the file exists and perform corresponding operations based on the result.
